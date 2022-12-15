@@ -1,0 +1,15 @@
+安装方法
+
+1，新建一个数据库，将根目录phpcrm01.sql文件导入进数据库
+
+2，修改/application/config/database.php数据库配置文件，第52~54行的数据库名账号密码改成你自己的。
+
+3，将全部源码上传至网站根目录，绑定域名，直接通过域名访问即可，用户名密码都是admin
+
+实测环境
+
+win+nginx+mysql+php5.6
+
+linux+nginx+mysql+php5.6
+
+均可完美运行。

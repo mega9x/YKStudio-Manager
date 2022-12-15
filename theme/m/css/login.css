@@ -1,0 +1,76 @@
+:-moz-selection {
+background:#008cd6;
+color:#fff;
+text-shadow:none;
+}
+::selection { background: #008cd6; color: #fff; text-shadow: none; }
+* { margin: 0 auto; padding: 0; }
+html, body { min-height: 100%; }
+body { font-family: "Arial"; font-size: 75%; color: #000; background-color: #008cd6; margin: 0; padding: 0; font-weight: normal; }
+a, a:hover, a:active { text-decoration: none; color: #000; }
+a { color: #999999; text-decoration: none; outline: none; cursor: pointer; }
+ol, li, ul, dl, dt, dd { list-style: none; }
+img { border: 0; }
+table { width: 100%; border-collapse: collapse; }
+select, input, textarea { font-size: 12px; color: #000; outline: none; resize: none; }
+em { display: inline-block; vertical-align: middle; }
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.cl { zoom: 1; }
+/*公共部分 star*/
+.wrap { height: 100%; padding-bottom: 20px; }
+ul.form-con { border-radius: 5px; background-color: #fff; width: 95%; margin: 0 auto 15px; }
+ul.form-con li { border-bottom: 1px solid #DDE3E8; text-align: center; line-height: 3.8em; position: relative; padding: 0 1em; text-align: left; }
+ul.form-con li:first-child:before { content: ""; background: url(../images/loginicons.png) -140px -3px no-repeat; background-size: 300px 50px; height: 30px; width: 20px; position: absolute; left: 10; top: 12px; display: inline-block; }
+ul.form-con li:last-child:before { content: ""; background: url(../images/loginicons.png) -164px -3px no-repeat; background-size: 300px 50px; height: 30px; width: 20px; position: absolute; left: 10; top: 12px; display: inline-block; }
+ul.form-con li.radio li { border-radius: 5px; border: 1px solid #A3CBEB; text-align: center; line-height: 3.8em; padding: 0 1em; }
+ul.form-con li:last-child { border-bottom: none; }
+li input { border: none; width: 92%; font-size: 1.4em; padding-left: 30px; }
+
+ul.form-con li.vercode b { right: 42%; }
+/*错误提示位置 */
+.errorMessage { position: absolute; top: 0px; right: 35px; display: none; }
+/*大提交按钮*/
+.form-btn button, .form-btn a { width: 95%; display: block; text-align: center; height: 45px; line-height: 45px; background-color: #1BBB96; font-size: 20px; color: #fff; border-radius: 3px; border: none; cursor: pointer; }
+.form-btn a.bg_white { background-color: #FFF; }
+form .tips { width: 93%; color: #FFFFFF; font-size: 14px; }
+/*公共部分 end*/
+
+
+/*其他方式登录star*/
+.login_sns { text-align: center; width: 95%; margin: 1em auto; font-size: 1.4em; }
+.login_sns p { color: #a3cbeb; margin: 1em auto; }
+.login_sns a { width: 50px; height: 50px; overflow: hidden; display: inline-block; margin: 0 10px; background: #ff5858; border-radius: 6px; }
+.login_sns a.qq { background: #5ca3e1; }
+.login_sns a.qq b { background-position: 10px center; }
+.login_sns a.wechat { background: #47C90E; }
+.login_sns a.wechat b { background-position: -42px center; }
+.login_sns a.weibo { background: #ff5858; }
+.login_sns a.weibo b { background-position: -92px center; }
+.login_sns a.renren { background: #6a9bec; }
+.login_sns a.renren b { background-position: -199px center; }
+/*其他方式登录end*/
+
+/*创建账户、已有账户 star*/
+
+div.btns { text-align: center; width: 95%; }
+div.btns a { display: block; width: 48%; color: #FFFFFF; background-color: #CCCCCC; border-radius: 3px; height: 48px; line-height: 48px; font-size: 18px; text-align: center; }
+div.btns a.founds { background-color: #cce8f7; color: #008cd6; }
+.founds { float: left; }
+.helis { float: right; }
+/*创建账户、已有账户 end*/
+
+/*单选按钮 star*/
+ul.form-con li.radio { text-align: left; font-size: 14px; }
+ul.form-con li input[type=radio] { width: 1.2em; height: 1.2em; vertical-align: middle; margin-left: 1em; }
+/*单选按钮end*/
+
+/*登录star*/
+#header { text-align: center; margin-bottom: 1em; }
+#header .logo {  max-height:80px; display: block; text-align:center; margin:20px 0 10px 0; }
+#header .logo img { max-width:300px; max-height:80px; }
+#header p { font-size: 16px; color: #fff; font-weight: normal; margin: 0 auto 15px; }
+.link { text-align: right; width: 95%; margin: 2em auto; }
+.link a { color: #a3cbeb; margin: 2em; font-size: 1.4em; }
+/*登录end*/
+
+
