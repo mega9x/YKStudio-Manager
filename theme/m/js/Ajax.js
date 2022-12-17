@@ -24,7 +24,7 @@ function checkcompany(intvalue,oldvalue)
 		if(xmlhttpobj){
 			xmlhttpobj.open('GET',"inc.isok.asp?action=Companys&cCompany="+escape(intvalue)+ "&oldvalue="+escape(oldvalue)+ "&number="+Math.random()+"",true);
 			xmlhttpobj.onreadystatechange=function(){
-				if(xmlhttpobj.readyState == 4){		//任务端完成请求
+				if(xmlhttpobj.readyState == 4){		//客户端完成请求
 					  if(xmlhttpobj.status == 200){	//服务端完成处理并返回数据
 						  var ResponseText = xmlhttpobj.responseText;
 						  if(ResponseText == ""){	//service返回了错误信息
@@ -76,7 +76,7 @@ function checklinkman(intvalue,oldvalue)
 		if(xmlhttpobj){
 			xmlhttpobj.open('GET',"inc.isok.asp?action=cLinkman&Linkman="+escape(intvalue)+ "&oldvalue="+escape(oldvalue)+ "&number="+Math.random()+"",true);
 			xmlhttpobj.onreadystatechange=function(){
-				if(xmlhttpobj.readyState == 4){		//任务端完成请求
+				if(xmlhttpobj.readyState == 4){		//客户端完成请求
 					  if(xmlhttpobj.status == 200){	//服务端完成处理并返回数据
 						  var ResponseText = xmlhttpobj.responseText;
 						  if(ResponseText == ""){	//service返回了错误信息
@@ -125,7 +125,7 @@ function checkmobile(intvalue,oldvalue)
 		if(xmlhttpobj){
 			xmlhttpobj.open('GET',"inc.isok.asp?action=cMobile&Mobile="+escape(intvalue)+ "&oldvalue="+escape(oldvalue)+ "&number="+Math.random()+"",true);
 			xmlhttpobj.onreadystatechange=function(){
-				if(xmlhttpobj.readyState == 4){		//任务端完成请求
+				if(xmlhttpobj.readyState == 4){		//客户端完成请求
 					  if(xmlhttpobj.status == 200){	//服务端完成处理并返回数据
 						  var ResponseText = xmlhttpobj.responseText;
 						  if(ResponseText == ""){	//service返回了错误信息
@@ -163,7 +163,7 @@ function getArea(jinke_diqu)
 		if(xmlhttpobj){
 			xmlhttpobj.open('GET',"inc.isok.asp?action=Area&jinke_diqu="+escape(jinke_diqu)+ "&number="+Math.random()+"",true);
 			xmlhttpobj.onreadystatechange=function(){
-				if(xmlhttpobj.readyState == 4){		//任务端完成请求
+				if(xmlhttpobj.readyState == 4){		//客户端完成请求
 					  if(xmlhttpobj.status == 200){	//服务端完成处理并返回数据
 						  var ResponseText = xmlhttpobj.responseText;
 						  if(ResponseText == ""){	//service返回了错误信息
@@ -200,7 +200,7 @@ function getTrade(Tradedata)
 		if(xmlhttpobj){
 			xmlhttpobj.open('GET',"inc.isok.asp?action=Trade&Tradedata="+escape(Tradedata)+ "&number="+Math.random()+"",true);
 			xmlhttpobj.onreadystatechange=function(){
-				if(xmlhttpobj.readyState == 4){		//任务端完成请求
+				if(xmlhttpobj.readyState == 4){		//客户端完成请求
 					  if(xmlhttpobj.status == 200){	//服务端完成处理并返回数据
 						  var ResponseText = xmlhttpobj.responseText;
 						  if(ResponseText == ""){	//service返回了错误信息

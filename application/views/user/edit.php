@@ -1,6 +1,5 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional
-.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
@@ -207,7 +206,7 @@ body{padding:45px 0 55px 0;}
 =""></td>
  </tr>
  <tr class="nonetr">
- <td class="td_l_r title">最大任务量</td>
+ <td class="td_l_r title">最大客户量</td>
  <td class="td_l_l" colspan=3><input name="ClientNum" type="text" id="ClientNum" class="int" size="10"
  value="0" onFocus="if (value =='0'){value =''}"onblur="if (value ==''){value='0'}" />
  <span class="info_help help01" >&nbsp;０为不限制！</span></td>

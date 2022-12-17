@@ -1,76 +1,74 @@
-<?php if(!defined('BASEPATH')) exit('No direct script access allowed');?>
- <table width="100%" cellpadding="0" cellspacing="0" border="1">
- <tr>
- 
-  <td width="50" nowrap="nowrap" class="td_l_c">±àºÅ</td>
-  
- <td width="180" nowrap="nowrap" class="td_l_l">¿Í»§Ãû³Æ</td>
-  
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<table width="100%" cellpadding="0" cellspacing="0" border="1">
+    <tr>
 
- <td width="100" nowrap="nowrap" class="td_l_c">ËùÔÚµØÇø</td>
+        <td width="50" nowrap="nowrap" class="td_l_c">ï¿½ï¿½ï¿½</td>
+
+        <td width="180" nowrap="nowrap" class="td_l_l">ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
 
- <td width="100" nowrap="nowrap" class="td_l_c">ÏêÏ¸µØÖ·</td>
+        <td width="100" nowrap="nowrap" class="td_l_c">ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½</td>
 
 
- <td width="100" nowrap="nowrap" class="td_l_c">¿Í»§ÀàÐÍ</td>
- 
- <td width="100" nowrap="nowrap" class="td_l_c">ÁªÏµQQ</td>
-
- <td width="120" nowrap="nowrap" class="td_l_c">ËùÊôÐÐÒµ</td>
+        <td width="100" nowrap="nowrap" class="td_l_c">ï¿½ï¿½Ï¸ï¿½ï¿½Ö·</td>
 
 
- <td width="80" nowrap="nowrap" class="td_l_c">¿Í»§¼¶±ð</td>
+        <td width="100" nowrap="nowrap" class="td_l_c">ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
- <td width="80" nowrap="nowrap" class="td_l_c">¿Í»§À´Ô´</td>
+        <td width="100" nowrap="nowrap" class="td_l_c">ï¿½ï¿½ÏµQQ</td>
 
- <td width="80" nowrap="nowrap" class="td_l_c">Áª Ïµ ÈË</td>
-
- <td width="80" nowrap="nowrap" class="td_l_c">Ö°Î»</td>
-
- <td width="100" nowrap="nowrap" class="td_l_c">ÊÖ»úºÅÂë</td>
-
- <td width="100" nowrap="nowrap" class="td_l_c">Â¼ÈëÊ±¼ä</td>
-
- <td width="80" nowrap="nowrap" class="td_l_c">ÒµÎñÔ±</td>
-
- </tr>
-
- <?php foreach($list as $arr=>$row) {?>
- <tr class="tr">
-  
- <td class="td_l_c"><?php echo $row['id']?></td>
-  
- <td class="td_l_l vtip"><?php echo $row['name']?></td>
-  
-
- <td class="td_l_c"><?php echo $row['area1']?>&nbsp;&nbsp;<?php echo $row['area2']?></td>
-
- <td class="td_l_c"><?php echo $row['address']?></td>
-
- <td class="td_l_c"><?php echo $row['type']?></td>
-
- <td class="td_l_c"><?php echo $row['qq']?></td>
-
- <td class="td_l_c"><?php echo $row['trade']?></td>
-
- <td class="td_l_c"><?php echo $row['start']?></td>
-
- <td class="td_l_c"><?php echo $row['source']?></td>
-
- <td class="td_l_c"><?php echo $row['linkman']?></td>
-
- <td class="td_l_c"><?php echo $row['job']?></td>
-
- <td class="td_l_c"><?php echo $row['mobile']?></td>
-
- <td class="td_l_c"><?php echo $row['adddate']?></td>
-
-  
+        <td width="120" nowrap="nowrap" class="td_l_c">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ</td>
 
 
- <td class="td_l_c"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['adduser']);?></td>
+        <td width="80" nowrap="nowrap" class="td_l_c">ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
- </tr>
- <?php }?>
- </table>
+        <td width="80" nowrap="nowrap" class="td_l_c">ï¿½Í»ï¿½ï¿½ï¿½Ô´</td>
+
+        <td width="80" nowrap="nowrap" class="td_l_c">ï¿½ï¿½ Ïµ ï¿½ï¿½</td>
+
+        <td width="80" nowrap="nowrap" class="td_l_c">Ö°Î»</td>
+
+        <td width="100" nowrap="nowrap" class="td_l_c">ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+
+        <td width="100" nowrap="nowrap" class="td_l_c">Â¼ï¿½ï¿½Ê±ï¿½ï¿½</td>
+
+        <td width="80" nowrap="nowrap" class="td_l_c">Òµï¿½ï¿½Ô±</td>
+
+    </tr>
+
+    <?php foreach ($list as $arr => $row) { ?>
+        <tr class="tr">
+
+            <td class="td_l_c"><?php echo $row['id'] ?></td>
+
+            <td class="td_l_l vtip"><?php echo $row['name'] ?></td>
+
+
+            <td class="td_l_c"><?php echo $row['area1'] ?>&nbsp;&nbsp;<?php echo $row['area2'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['address'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['type'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['qq'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['trade'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['start'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['source'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['linkman'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['job'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['mobile'] ?></td>
+
+            <td class="td_l_c"><?php echo $row['adddate'] ?></td>
+
+
+            <td class="td_l_c"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['adduser']); ?></td>
+
+        </tr>
+    <?php } ?>
+</table>

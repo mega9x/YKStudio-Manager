@@ -54,7 +54,7 @@ else if(winWidth>=1366&&winWidth<1440)
 }
 else if(winWidth>=1440&&winWidth<1600)
 {
-	UwinWidth=1320;
+	UwinWidth=1400;
 	
 	PageWidthMax=1220;
 	PageWidthMid=1000;
@@ -62,19 +62,19 @@ else if(winWidth>=1440&&winWidth<1600)
 }
 else if(winWidth>=1600&&winWidth<=1920)
 {
-	UwinWidth=1380;
+	UwinWidth=1700;
 	
-	PageWidthMax=1280;
-	PageWidthMid=1080;
-	PageWidthMin=880;
+	PageWidthMax=1500;
+	PageWidthMid=1500;
+	PageWidthMin=1500;
 }
 else if(winWidth>1920)
 {
-    UwinWidth=1500;	
+    UwinWidth=1700;
 	
-	PageWidthMax=1400;
-	PageWidthMid=1400;
-	PageWidthMin=1400;
+	PageWidthMax=1600;
+	PageWidthMid=1600;
+	PageWidthMin=1600;
 	
 }
 
@@ -2181,7 +2181,7 @@ var sppass = document.getElementById("sppass").value;
 if(xmlhttpobj){
 	xmlhttpobj.open('POST',sys_locks+"?action=j&userpwd="+sppass,true);
 	xmlhttpobj.onreadystatechange=function(){
-		if(xmlhttpobj.readyState == 4&xmlhttpobj.status == 200){ //任务端完成请求&服务端完成处理并返回数据
+		if(xmlhttpobj.readyState == 4&xmlhttpobj.status == 200){ //客户端完成请求&服务端完成处理并返回数据
 
 				  var ResponseText = xmlhttpobj.responseText;
 				  if(ResponseText !== ""){	//service返回了错误信息

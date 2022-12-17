@@ -1,57 +1,57 @@
-<?php if(!defined('BASEPATH')) exit('No direct script access allowed');?>
- <table width="100%" cellpadding="0" cellspacing="0" border="1">
- <tr>
- 
- <td width="80" class="td_l_c">±àºÅ</td>
- <td class="td_l_l">¿Í»§Ãû³Æ</td>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<table width="100%" cellpadding="0" cellspacing="0" border="1">
+    <tr>
 
- <td class="td_l_c">ÁªÏµÈË</td>
+        <td width="80" class="td_l_c">ï¿½ï¿½ï¿½</td>
+        <td class="td_l_l">ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
-
- <td class="td_l_c">ÏÂµ¥ÈÕÆÚ</td>
+        <td class="td_l_c">ï¿½ï¿½Ïµï¿½ï¿½</td>
 
 
- <td class="td_l_c">½»µ¥ÈÕÆÚ</td>
-
- <td class="td_l_c">¶©µ¥½ð¶î</td>
-
- <td class="td_l_c">×´Ì¬</td>
-
- <td class="td_l_c">ÒµÎñÔ±</td>
+        <td class="td_l_c">ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
 
- <td class="td_l_c">Â¼ÈëÊ±¼ä</td>
+        <td class="td_l_c">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
- </tr>
+        <td class="td_l_c">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
- <?php foreach($list as $arr=>$row) {?>
- <tr class="tr">
- <td class="td_l_c"><?php echo $row['id']?></td>
- <td class="td_l_l"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['customername']);?></td>
+        <td class="td_l_c">×´Ì¬</td>
 
- <td class="td_l_c"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['linkman']);?></td>
+        <td class="td_l_c">Òµï¿½ï¿½Ô±</td>
 
 
- <td class="td_l_c"><?php echo $row['sdate']?></td>
+        <td class="td_l_c">Â¼ï¿½ï¿½Ê±ï¿½ï¿½</td>
+
+    </tr>
+
+    <?php foreach ($list as $arr => $row) { ?>
+        <tr class="tr">
+            <td class="td_l_c"><?php echo $row['id'] ?></td>
+            <td class="td_l_l"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['customername']); ?></td>
+
+            <td class="td_l_c"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['linkman']); ?></td>
 
 
- <td class="td_l_c"><?php echo $row['edate']?></td>
+            <td class="td_l_c"><?php echo $row['sdate'] ?></td>
 
 
- <td class="td_l_c"><?php echo $row['money']?></td>
-
- <td class="td_l_c">
- <?php echo iconv("UTF-8","gbk//TRANSLIT",$audit[$row['state']]);?>
- </td>
+            <td class="td_l_c"><?php echo $row['edate'] ?></td>
 
 
- <td class="td_l_c"> <?php echo iconv("UTF-8","gbk//TRANSLIT",$row['adduser']);?>
-	</td>
+            <td class="td_l_c"><?php echo $row['money'] ?></td>
+
+            <td class="td_l_c">
+                <?php echo iconv("UTF-8", "gbk//TRANSLIT", $audit[$row['state']]); ?>
+            </td>
 
 
- <td class="td_l_c"><?php echo $row['addtime']?></td>
+            <td class="td_l_c"> <?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['adduser']); ?>
+            </td>
 
-  
- </tr>
- <?php }?>
- </table>
+
+            <td class="td_l_c"><?php echo $row['addtime'] ?></td>
+
+
+        </tr>
+    <?php } ?>
+</table>

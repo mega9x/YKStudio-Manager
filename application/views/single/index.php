@@ -28,7 +28,7 @@
  </ul>
 </span>
 
-<script>function InfoAdd_Chose() {$.dialog.open('<?php echo site_url('common/choose_customer')?>', {title: '新增跟单【第一步：选择跟单任务】', width: 1080, height: 550,fixed: true}); };</script> 
+<script>function InfoAdd_Chose() {$.dialog.open('<?php echo site_url('common/choose_customer')?>', {title: '新增跟单【第一步：选择跟单客户】', width: 1080, height: 550,fixed: true}); };</script> 
 <script>function ChoseOK(i){{$.dialog.open('<?php echo site_url('single/add')?>?id='+i, {title: '新增跟单【第二步：录入跟单信息】', width: 600, height: 400,fixed: true}); };}</script> 
 <script>function Setting_Gendan() {$.dialog.open('<?php echo site_url('setting/config')?>?type=single', {title: '自定义设置', width: 600, height: 290,fixed: true}); };</script>
  

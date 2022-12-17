@@ -116,7 +116,7 @@ CREATE TABLE `ci_customer` (
   `type` varchar(50) DEFAULT '' COMMENT '转化情况',
   `address` varchar(255) DEFAULT '' COMMENT '账户信息',
   `email` varchar(50) DEFAULT '' COMMENT '邮箱',
-  `start` varchar(50) DEFAULT '0' COMMENT '任务等级',
+  `start` varchar(50) DEFAULT '0' COMMENT '客户等级',
   `groupid` int(11) DEFAULT '0',
   `linkman` varchar(100) DEFAULT '',
   `job` varchar(50) DEFAULT '' COMMENT '任务链接',
@@ -200,7 +200,7 @@ CREATE TABLE `ci_customer_file` (
   `file_num` int(60) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='任务附件';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='客户附件';
 
 -- ----------------------------
 -- Records of ci_customer_file
@@ -304,7 +304,7 @@ INSERT INTO `ci_financier` VALUES ('53', '1', '26', 'xiaotian', '28', '19', '合
 DROP TABLE IF EXISTS `ci_linkman`;
 CREATE TABLE `ci_linkman` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `customerid` int(11) DEFAULT '0' COMMENT '任务ID',
+  `customerid` int(11) DEFAULT '0' COMMENT '客户ID',
   `customername` varchar(100) DEFAULT '',
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT '0' COMMENT '任务链接',
   `sex` varchar(50) DEFAULT '' COMMENT '性别',
@@ -384,8 +384,8 @@ CREATE TABLE `ci_mail_template` (
 -- ----------------------------
 -- Records of ci_mail_template
 -- ----------------------------
-INSERT INTO `ci_mail_template` VALUES ('1', '合同到期提醒', '1', 'TEST', '二是热水', '合同即将到期，您需要续费了！', '&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf8&quot; /&gt;\r\n&lt;style&gt;\r\n* { padding: 0; margin: 0; }\r\n&lt;/style&gt;\r\n&lt;div style=&quot;max-width:1200px;width:100%;margin:0 auto;margin-top:5px;margin-bottom:5px;border:1px solid #ddd;font-family:微软雅黑,宋体;font-size:14px;line-height:25px;&quot;&gt;\r\n	&lt;div style=&quot;height:60px;background:#f8f8f8;border-bottom:1px solid #ddd;line-height:60px;&quot;&gt;\r\n		&lt;span style=&quot;float:right;padding-right:10px;color:red;&quot;&gt;服务热线：400-089-6780&lt;/span&gt; \r\n		&lt;h1 style=&quot;font-size:18px;padding-left:10px;&quot;&gt;\r\n			XXX信息技术有限公司\r\n		&lt;/h1&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;min-height:300px;width:80%;margin:0 auto;padding:20px 0 20px 0;&quot;&gt;\r\n		&lt;div style=&quot;font-weight:bold;&quot;&gt;\r\n			亲爱的任务：[Mail_任务名称]，感谢您与我们的合作！\r\n		&lt;/div&gt;\r\n		&lt;div&gt;\r\n			您在我司的合同/产品需要续费了！合同到期请及时联系我们&lt;span style=&quot;font-family:\\\'Microsoft YaHei\\\', 微软雅黑, 宋体, STHeiti, MingLiu, Verdana, Geneva, sans-serif;line-height:35px;white-space:normal;background-color:#FFFFFF;&quot;&gt;&lt;/span&gt; \r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;height:50px;background:#f8f8f8;border-top:1px solid #ddd;padding:5px;font-size:12px;&quot;&gt;\r\n		&lt;p&gt;\r\n			本邮件来自系统自动发送！\r\n		&lt;/p&gt;\r\n		&lt;p&gt;\r\n			手机：15888888888 &amp;nbsp;电话：010-88888888 &amp;nbsp;QQ：888888888 &amp;nbsp;网址：www.abc.com\r\n		&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;', '2016-08-31', '2016-08-31 12:49:37', '0');
-INSERT INTO `ci_mail_template` VALUES ('2', '公司介绍', '1', 'TEST', '', 'XXX信息技术有限公司介绍', '&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;\r\n&lt;style&gt;\r\n* { padding: 0; margin: 0; }\r\n&lt;/style&gt;\r\n&lt;div style=&quot;max-width:1200px;width:100%;margin:0 auto;margin-top:5px;margin-bottom:5px;border:1px solid #ddd;font-family:微软雅黑,宋体;font-size:14px;line-height:25px;&quot;&gt;\r\n	&lt;div style=&quot;height:60px;background:#f8f8f8;border-bottom:1px solid #ddd;line-height:60px;&quot;&gt;\r\n		&lt;span style=&quot;float:right;padding-right:10px;color:red;&quot;&gt;服务热线：400-089-8888&lt;/span&gt; \r\n		&lt;h1 style=&quot;font-size:18px;padding-left:10px;&quot;&gt;\r\n			XXX信息技术有限公司\r\n		&lt;/h1&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;min-height:300px;width:80%;margin:0 auto;padding:20px 0 20px 0;&quot;&gt;\r\n		&lt;div style=&quot;font-weight:bold;&quot;&gt;\r\n			亲爱的任务：[Mail_任务名称]，感谢您对我们的关注！\r\n		&lt;/div&gt;\r\n		&lt;div&gt;\r\n			我们公司主要从事于......\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;height:50px;background:#f8f8f8;border-top:1px solid #ddd;padding:5px;font-size:12px;&quot;&gt;\r\n		&lt;p&gt;\r\n			本邮件来自系统自动发送！\r\n		&lt;/p&gt;\r\n		&lt;p&gt;\r\n			手机：15888888888 &amp;nbsp;电话：010-88888888 &amp;nbsp;QQ：888888888 &amp;nbsp;网址：www.abc.com\r\n		&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;', '2016-08-31', '2016-08-31 17:10:44', '0');
+INSERT INTO `ci_mail_template` VALUES ('1', '合同到期提醒', '1', 'TEST', '二是热水', '合同即将到期，您需要续费了！', '&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf8&quot; /&gt;\r\n&lt;style&gt;\r\n* { padding: 0; margin: 0; }\r\n&lt;/style&gt;\r\n&lt;div style=&quot;max-width:1200px;width:100%;margin:0 auto;margin-top:5px;margin-bottom:5px;border:1px solid #ddd;font-family:微软雅黑,宋体;font-size:14px;line-height:25px;&quot;&gt;\r\n	&lt;div style=&quot;height:60px;background:#f8f8f8;border-bottom:1px solid #ddd;line-height:60px;&quot;&gt;\r\n		&lt;span style=&quot;float:right;padding-right:10px;color:red;&quot;&gt;服务热线：400-089-6780&lt;/span&gt; \r\n		&lt;h1 style=&quot;font-size:18px;padding-left:10px;&quot;&gt;\r\n			XXX信息技术有限公司\r\n		&lt;/h1&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;min-height:300px;width:80%;margin:0 auto;padding:20px 0 20px 0;&quot;&gt;\r\n		&lt;div style=&quot;font-weight:bold;&quot;&gt;\r\n			亲爱的客户：[Mail_任务名称]，感谢您与我们的合作！\r\n		&lt;/div&gt;\r\n		&lt;div&gt;\r\n			您在我司的合同/产品需要续费了！合同到期请及时联系我们&lt;span style=&quot;font-family:\\\'Microsoft YaHei\\\', 微软雅黑, 宋体, STHeiti, MingLiu, Verdana, Geneva, sans-serif;line-height:35px;white-space:normal;background-color:#FFFFFF;&quot;&gt;&lt;/span&gt; \r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;height:50px;background:#f8f8f8;border-top:1px solid #ddd;padding:5px;font-size:12px;&quot;&gt;\r\n		&lt;p&gt;\r\n			本邮件来自系统自动发送！\r\n		&lt;/p&gt;\r\n		&lt;p&gt;\r\n			手机：15888888888 &amp;nbsp;电话：010-88888888 &amp;nbsp;QQ：888888888 &amp;nbsp;网址：www.abc.com\r\n		&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;', '2016-08-31', '2016-08-31 12:49:37', '0');
+INSERT INTO `ci_mail_template` VALUES ('2', '公司介绍', '1', 'TEST', '', 'XXX信息技术有限公司介绍', '&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;\r\n&lt;style&gt;\r\n* { padding: 0; margin: 0; }\r\n&lt;/style&gt;\r\n&lt;div style=&quot;max-width:1200px;width:100%;margin:0 auto;margin-top:5px;margin-bottom:5px;border:1px solid #ddd;font-family:微软雅黑,宋体;font-size:14px;line-height:25px;&quot;&gt;\r\n	&lt;div style=&quot;height:60px;background:#f8f8f8;border-bottom:1px solid #ddd;line-height:60px;&quot;&gt;\r\n		&lt;span style=&quot;float:right;padding-right:10px;color:red;&quot;&gt;服务热线：400-089-8888&lt;/span&gt; \r\n		&lt;h1 style=&quot;font-size:18px;padding-left:10px;&quot;&gt;\r\n			XXX信息技术有限公司\r\n		&lt;/h1&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;min-height:300px;width:80%;margin:0 auto;padding:20px 0 20px 0;&quot;&gt;\r\n		&lt;div style=&quot;font-weight:bold;&quot;&gt;\r\n			亲爱的客户：[Mail_任务名称]，感谢您对我们的关注！\r\n		&lt;/div&gt;\r\n		&lt;div&gt;\r\n			我们公司主要从事于......\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n	&lt;div style=&quot;height:50px;background:#f8f8f8;border-top:1px solid #ddd;padding:5px;font-size:12px;&quot;&gt;\r\n		&lt;p&gt;\r\n			本邮件来自系统自动发送！\r\n		&lt;/p&gt;\r\n		&lt;p&gt;\r\n			手机：15888888888 &amp;nbsp;电话：010-88888888 &amp;nbsp;QQ：888888888 &amp;nbsp;网址：www.abc.com\r\n		&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;', '2016-08-31', '2016-08-31 17:10:44', '0');
 INSERT INTO `ci_mail_template` VALUES ('3', '是是是', '1', 'TEST', '', '是是是', '萨达萨达萨达撒的萨达萨达萨达', '2017-01-02', '2017-01-02 17:35:26', '0');
 
 -- ----------------------------
@@ -431,9 +431,9 @@ INSERT INTO `ci_menu` VALUES ('7', '选项值设置', '0', '7', '1', '0', '', ''
 INSERT INTO `ci_menu` VALUES ('8', '导出Excel', '0', '8', '1', '1', 'export', '', 'self', '4', '401.png', '401', 'sapp', '', 'system', '', '0', '', '0', '1');
 INSERT INTO `ci_menu` VALUES ('9', '导入Excel', '0', '9', '1', '2', 'import', '', 'self', '4', '402.png', '402', 'sapp', '', 'system', '', '0', '', '0', '1');
 INSERT INTO `ci_menu` VALUES ('10', '批量操作', '0', '10', '1', '0', '', '', 'self', '1', '', '0', '', '', 'system', '', '0', '', '0', '0');
-INSERT INTO `ci_menu` VALUES ('11', '任务共享', '0', '11', '1', '0', '', '', 'self', '1', '1016.png', '1016', '', '', 'system', '', '0', '', '0', '1');
+INSERT INTO `ci_menu` VALUES ('11', '客户共享', '0', '11', '1', '0', '', '', 'self', '1', '1016.png', '1016', '', '', 'system', '', '0', '', '0', '1');
 INSERT INTO `ci_menu` VALUES ('12', '订单处理', '0', '12', '1', '0', '', '', 'self', '1', '', '0', '', '', 'system', '', '0', '', '0', '0');
-INSERT INTO `ci_menu` VALUES ('13', '任务转移', '0', '13', '1', '0', '', '', 'self', '1', '', '0', '', '', 'system', '', '0', '', '0', '0');
+INSERT INTO `ci_menu` VALUES ('13', '客户转移', '0', '13', '1', '0', '', '', 'self', '1', '', '0', '', '', 'system', '', '0', '', '0', '0');
 INSERT INTO `ci_menu` VALUES ('14', '售后处理', '0', '14', '1', '0', '', '', 'self', '1', '', '0', '', '', 'system', '', '0', '', '0', '0');
 INSERT INTO `ci_menu` VALUES ('15', '合同审核', '0', '15', '1', '0', '', '', 'self', '1', '', '0', '', '', 'system', '', '0', '', '0', '0');
 INSERT INTO `ci_menu` VALUES ('16', '回收站', '0', '16', '1', '7', 'recycle', '', 'self', '1', '107.png', '107', 'app', '', 'system', '', '0', '', '0', '0');
@@ -506,8 +506,8 @@ CREATE TABLE `ci_order` (
   `uid` int(11) DEFAULT '0',
   `number` varchar(25) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT '' COMMENT '单据编号',
   `adduser` varchar(50) DEFAULT '' COMMENT '制单人',
-  `customerid` int(11) DEFAULT '0' COMMENT '任务ID',
-  `customername` varchar(100) DEFAULT '' COMMENT '任务姓名',
+  `customerid` int(11) DEFAULT '0' COMMENT '客户ID',
+  `customername` varchar(100) DEFAULT '' COMMENT '客户姓名',
   `linkman` varchar(11) DEFAULT '' COMMENT '任务链接',
   `state` tinyint(1) DEFAULT '3' COMMENT '订单状态 3未处理 2处理中 1已完成',
   `deposit` decimal(8,2) DEFAULT '0.00' COMMENT '预付款',
@@ -822,7 +822,7 @@ CREATE TABLE `ci_single` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT '0' COMMENT '任务名称',
   `uid` int(11) DEFAULT '0' COMMENT '备注',
-  `customerid` int(11) DEFAULT '0' COMMENT '任务ID',
+  `customerid` int(11) DEFAULT '0' COMMENT '客户ID',
   `customername` varchar(100) DEFAULT '' COMMENT '任务名称',
   `type` varchar(50) DEFAULT '' COMMENT '跟单类型',
   `state` varchar(50) DEFAULT '' COMMENT '跟单进度',
@@ -992,10 +992,10 @@ CREATE TABLE `ci_userlog` (
 -- ----------------------------
 -- Records of ci_userlog
 -- ----------------------------
-INSERT INTO `ci_userlog` VALUES ('1', '1', '127.0.0.1', '', '新增', '任务列表', '1', null, 'TEST', '2016-08-26 18:11:46', '2016-08-26', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('2', '2', '127.0.0.1', '', '新增', '任务列表', '2', null, '小飞', '2016-08-26 18:29:36', '2016-08-26', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('3', '2', '127.0.0.1', '', '新增', '任务列表', '3', null, '小飞', '2016-08-26 18:32:04', '2016-08-26', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('4', '2', '127.0.0.1', '', '新增', '任务列表', '4', 'dsfdsfsdf', '小飞', '2016-08-26 18:39:44', '2016-08-26', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('1', '1', '127.0.0.1', '', '新增', '客户列表', '1', null, 'TEST', '2016-08-26 18:11:46', '2016-08-26', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('2', '2', '127.0.0.1', '', '新增', '客户列表', '2', null, '小飞', '2016-08-26 18:29:36', '2016-08-26', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('3', '2', '127.0.0.1', '', '新增', '客户列表', '3', null, '小飞', '2016-08-26 18:32:04', '2016-08-26', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('4', '2', '127.0.0.1', '', '新增', '客户列表', '4', 'dsfdsfsdf', '小飞', '2016-08-26 18:39:44', '2016-08-26', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('5', '1', '127.0.0.1', '', '新增', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2016-08-31 16:26:16', '2016-08-31', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('6', '1', '127.0.0.1', '', '新增', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-08-31 16:35:07', '2016-08-31', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('7', '1', '127.0.0.1', '', '新增', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-09-09 14:19:15', '2016-09-09', '1', '1');
@@ -1009,14 +1009,14 @@ INSERT INTO `ci_userlog` VALUES ('14', '1', '127.0.0.1', '', '新增', '订单�
 INSERT INTO `ci_userlog` VALUES ('15', '1', '127.0.0.1', '', '新增', '合同记录', '1', 'dsfdsfsdf', 'TEST', '2016-09-09 16:17:40', '2016-09-09', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('16', '1', '127.0.0.1', '', '修改', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-06 13:56:08', '2016-12-06', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('17', '1', '127.0.0.1', '', '修改', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-06 13:56:14', '2016-12-06', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('18', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 10:03:12', '2016-12-13', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('19', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 10:50:25', '2016-12-13', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('18', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 10:03:12', '2016-12-13', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('19', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 10:50:25', '2016-12-13', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('20', '1', '127.0.0.1', '', '修改', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 11:28:23', '2016-12-13', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('21', '1', '127.0.0.1', '', '修改', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:16:50', '2016-12-13', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('22', '1', '127.0.0.1', '', '修改', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:17:03', '2016-12-13', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('23', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:28:24', '2016-12-13', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('23', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:28:24', '2016-12-13', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('24', '1', '127.0.0.1', '', '修改', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:50:34', '2016-12-13', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('25', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:50:45', '2016-12-13', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('25', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-13 12:50:45', '2016-12-13', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('26', '1', '127.0.0.1', '', '修改', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-14 10:47:32', '2016-12-14', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('27', '1', '127.0.0.1', '', '新增', '订单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-14 11:25:21', '2016-12-14', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('28', '1', '127.0.0.1', '', '新增', '合同记录', '2', 'dsfdsfsdf', 'TEST', '2016-12-14 11:31:21', '2016-12-14', '1', '1');
@@ -1026,21 +1026,21 @@ INSERT INTO `ci_userlog` VALUES ('31', '1', '127.0.0.1', '', '新增', '合同�
 INSERT INTO `ci_userlog` VALUES ('32', '1', '127.0.0.1', '', '新增', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2016-12-16 18:21:50', '2016-12-16', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('33', '1', '127.0.0.1', '', '新增', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-19 15:34:50', '2016-12-19', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('34', '1', '127.0.0.1', '', '新增', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-19 15:35:23', '2016-12-19', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('35', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-19 16:07:16', '2016-12-19', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('36', '1', '127.0.0.1', '', '修改', '任务列表', '3', 'FGHGFHGFH', 'TEST', '2016-12-19 16:07:19', '2016-12-19', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('37', '1', '127.0.0.1', '', '修改', '任务列表', '2', 'sadsad', 'TEST', '2016-12-19 16:07:21', '2016-12-19', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('38', '1', '127.0.0.1', '', '修改', '任务列表', '1', '的萨达', 'TEST', '2016-12-19 16:07:24', '2016-12-19', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('39', '1', '127.0.0.1', '', '修改', '任务列表', '1', '的萨达', 'TEST', '2016-12-19 16:14:51', '2016-12-19', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('35', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-19 16:07:16', '2016-12-19', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('36', '1', '127.0.0.1', '', '修改', '客户列表', '3', 'FGHGFHGFH', 'TEST', '2016-12-19 16:07:19', '2016-12-19', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('37', '1', '127.0.0.1', '', '修改', '客户列表', '2', 'sadsad', 'TEST', '2016-12-19 16:07:21', '2016-12-19', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('38', '1', '127.0.0.1', '', '修改', '客户列表', '1', '的萨达', 'TEST', '2016-12-19 16:07:24', '2016-12-19', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('39', '1', '127.0.0.1', '', '修改', '客户列表', '1', '的萨达', 'TEST', '2016-12-19 16:14:51', '2016-12-19', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('43', '1', '127.0.0.1', '', '修改', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-19 16:47:34', '2016-12-19', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('44', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-20 09:20:34', '2016-12-20', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('44', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2016-12-20 09:20:34', '2016-12-20', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('45', '1', '127.0.0.1', '', '修改', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-28 13:44:17', '2016-12-28', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('46', '1', '127.0.0.1', '', '修改', '跟单记录', '4', 'dsfdsfsdf', 'TEST', '2016-12-28 13:44:27', '2016-12-28', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('47', '1', '127.0.0.1', '', '新增', '任务列表', '5', null, 'TEST', '2017-03-29 16:51:33', '2017-03-29', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('48', '1', '127.0.0.1', '', '修改', '任务列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 17:24:19', '2017-03-29', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('49', '1', '127.0.0.1', '', '修改', '任务列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 17:24:37', '2017-03-29', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('50', '1', '127.0.0.1', '', '修改', '任务列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 17:24:47', '2017-03-29', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('51', '1', '127.0.0.1', '', '修改', '任务列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 20:16:35', '2017-03-29', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('52', '1', '127.0.0.1', '', '修改', '任务列表', '4', 'dsfdsfsdf', 'TEST', '2017-03-29 20:18:14', '2017-03-29', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('47', '1', '127.0.0.1', '', '新增', '客户列表', '5', null, 'TEST', '2017-03-29 16:51:33', '2017-03-29', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('48', '1', '127.0.0.1', '', '修改', '客户列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 17:24:19', '2017-03-29', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('49', '1', '127.0.0.1', '', '修改', '客户列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 17:24:37', '2017-03-29', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('50', '1', '127.0.0.1', '', '修改', '客户列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 17:24:47', '2017-03-29', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('51', '1', '127.0.0.1', '', '修改', '客户列表', '5', 'ASDSADASD', 'TEST', '2017-03-29 20:16:35', '2017-03-29', '1', '1');
+INSERT INTO `ci_userlog` VALUES ('52', '1', '127.0.0.1', '', '修改', '客户列表', '4', 'dsfdsfsdf', 'TEST', '2017-03-29 20:18:14', '2017-03-29', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('53', '1', '127.0.0.1', '', '修改', '跟单记录', null, null, 'TEST', '2017-03-30 09:49:20', '2017-03-30', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('54', '1', '127.0.0.1', '', '修改', '跟单记录', null, null, 'TEST', '2017-03-30 09:51:36', '2017-03-30', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('55', '1', '127.0.0.1', '', '新增', '跟单记录', null, null, 'TEST', '2017-03-30 09:52:55', '2017-03-30', '1', '1');
@@ -1052,7 +1052,7 @@ INSERT INTO `ci_userlog` VALUES ('60', '1', '127.0.0.1', '', '修改', '任务�
 INSERT INTO `ci_userlog` VALUES ('61', '1', '127.0.0.1', '', '删除', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2017-03-30 15:21:38', '2017-03-30', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('62', '1', '127.0.0.1', '', '修改', '任务链接', '4', 'dsfdsfsdf', 'TEST', '2017-03-30 15:22:27', '2017-03-30', '1', '1');
 INSERT INTO `ci_userlog` VALUES ('63', '1', '127.0.0.1', null, '删除', '附件记录', '4', 'dsfdsfsdf', 'TEST', '2017-03-30 15:27:17', '2017-03-30', '1', '1');
-INSERT INTO `ci_userlog` VALUES ('64', '1', '127.0.0.1', '', '修改', '任务列表', '5', 'ASDSADASD', 'TEST', '2017-03-30 17:42:42', '2017-03-30', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('64', '1', '127.0.0.1', '', '修改', '客户列表', '5', 'ASDSADASD', 'TEST', '2017-03-30 17:42:42', '2017-03-30', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('65', '1', '127.0.0.1', '', '修改', '跟单记录', '0', '', 'TEST', '2017-03-30 19:03:10', '2017-03-30', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('66', '1', '127.0.0.1', '', '修改', '跟单记录', '0', '', 'TEST', '2017-03-30 19:03:32', '2017-03-30', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('67', '1', '127.0.0.1', '', '新增', '合同记录', '4', 'dsfdsfsdf', 'TEST', '2017-03-30 19:41:48', '2017-03-30', '0', '0');
@@ -1084,12 +1084,12 @@ INSERT INTO `ci_userlog` VALUES ('92', '1', '127.0.0.1', null, '删除', '附件
 INSERT INTO `ci_userlog` VALUES ('93', '1', '127.0.0.1', null, '删除', '附件记录', '5', 'ASDSADASD', 'TEST', '2018-06-09 00:24:04', '2018-06-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('94', '1', '127.0.0.1', null, '删除', '附件记录', '5', 'ASDSADASD', 'TEST', '2018-06-09 00:24:27', '2018-06-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('95', '1', '127.0.0.1', null, '删除', '附件记录', '5', 'ASDSADASD', 'TEST', '2018-06-09 00:25:27', '2018-06-09', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('96', '1', '127.0.0.1', '', '修改', '任务列表', '5', 'ASDSADASD', 'TEST', '2018-06-11 17:54:40', '2018-06-11', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('96', '1', '127.0.0.1', '', '修改', '客户列表', '5', 'ASDSADASD', 'TEST', '2018-06-11 17:54:40', '2018-06-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('97', '1', '127.0.0.1', '', '新增', '任务链接', '5', 'ASDSADASD', 'TEST', '2018-06-11 17:56:19', '2018-06-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('98', '1', '127.0.0.1', '', '新增', '跟单记录', '5', 'ASDSADASD', 'TEST', '2018-06-11 17:56:37', '2018-06-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('99', '1', '127.0.0.1', '', '新增', '订单记录', '5', 'ASDSADASD', 'TEST', '2018-06-11 17:58:44', '2018-06-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('100', '1', '127.0.0.1', '', '新增', '合同记录', '5', 'ASDSADASD', 'TEST', '2018-06-12 09:23:13', '2018-06-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('101', '1', '61.146.89.123', '', '新增', '任务列表', '6', '', 'TEST', '2018-06-21 14:07:13', '2018-06-21', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('101', '1', '61.146.89.123', '', '新增', '客户列表', '6', '', 'TEST', '2018-06-21 14:07:13', '2018-06-21', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('102', '1', '116.231.158.197', '', '删除', '合同记录', '5', 'ASDSADASD', 'TEST', '2018-07-04 09:43:22', '2018-07-04', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('103', '1', '116.231.158.197', '', '删除', '合同记录', '4', 'dsfdsfsdf', 'TEST', '2018-07-04 09:43:25', '2018-07-04', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('104', '1', '116.231.158.197', '', '删除', '合同记录', '4', 'dsfdsfsdf', 'TEST', '2018-07-04 09:43:27', '2018-07-04', '0', '0');
@@ -1111,52 +1111,52 @@ INSERT INTO `ci_userlog` VALUES ('119', '1', '116.231.158.197', null, '删除', 
 INSERT INTO `ci_userlog` VALUES ('120', '1', '116.231.158.197', null, '删除', '收支记录', '0', '', 'TEST', '2018-07-04 10:17:18', '2018-07-04', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('121', '1', '116.231.158.197', null, '删除', '收支记录', '0', '', 'TEST', '2018-07-04 10:17:20', '2018-07-04', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('122', '1', '116.231.158.197', null, '删除', '收支记录', '0', '', 'TEST', '2018-07-04 10:17:22', '2018-07-04', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('123', '1', '116.231.158.197', '', '新增', '任务列表', '7', '', 'TEST', '2018-07-04 10:33:36', '2018-07-04', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('124', '1', '39.187.125.117', '', '新增', '任务链接', '7', '任务1', 'TEST', '2018-07-05 09:40:52', '2018-07-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('125', '1', '39.187.125.117', '', '修改', '任务链接', '7', '任务1', 'TEST', '2018-07-05 09:41:00', '2018-07-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('126', '1', '39.187.125.117', '', '新增', '跟单记录', '7', '任务1', 'TEST', '2018-07-05 09:41:16', '2018-07-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('127', '1', '39.187.125.117', '', '新增', '订单记录', '7', '任务1', 'TEST', '2018-07-05 09:41:25', '2018-07-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('128', '1', '39.187.125.117', '', '新增', '跟单记录', '7', '任务1', 'TEST', '2018-07-05 09:44:06', '2018-07-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('129', '1', '39.187.125.117', '', '新增', '订单记录', '7', '任务1', 'TEST', '2018-07-05 09:44:20', '2018-07-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('123', '1', '116.231.158.197', '', '新增', '客户列表', '7', '', 'TEST', '2018-07-04 10:33:36', '2018-07-04', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('124', '1', '39.187.125.117', '', '新增', '任务链接', '7', '客户1', 'TEST', '2018-07-05 09:40:52', '2018-07-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('125', '1', '39.187.125.117', '', '修改', '任务链接', '7', '客户1', 'TEST', '2018-07-05 09:41:00', '2018-07-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('126', '1', '39.187.125.117', '', '新增', '跟单记录', '7', '客户1', 'TEST', '2018-07-05 09:41:16', '2018-07-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('127', '1', '39.187.125.117', '', '新增', '订单记录', '7', '客户1', 'TEST', '2018-07-05 09:41:25', '2018-07-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('128', '1', '39.187.125.117', '', '新增', '跟单记录', '7', '客户1', 'TEST', '2018-07-05 09:44:06', '2018-07-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('129', '1', '39.187.125.117', '', '新增', '订单记录', '7', '客户1', 'TEST', '2018-07-05 09:44:20', '2018-07-05', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('130', '1', '39.187.125.117', '', '修改', '订单记录', '0', '', 'TEST', '2018-07-05 09:45:06', '2018-07-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('131', '1', '183.253.144.46', '', '新增', '收支记录', '7', '任务1', 'TEST', '2018-07-12 23:54:01', '2018-07-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('132', '1', '183.253.144.46', '', '新增', '跟单记录', '7', '任务1', 'TEST', '2018-07-12 23:56:49', '2018-07-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('131', '1', '183.253.144.46', '', '新增', '收支记录', '7', '客户1', 'TEST', '2018-07-12 23:54:01', '2018-07-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('132', '1', '183.253.144.46', '', '新增', '跟单记录', '7', '客户1', 'TEST', '2018-07-12 23:56:49', '2018-07-12', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('133', '1', '183.253.144.46', '', '新增', '收支记录', '0', '', 'TEST', '2018-07-12 23:59:58', '2018-07-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('134', '1', '116.1.6.23', '', '新增', '合同记录', '7', '任务1', 'TEST', '2018-07-19 10:49:17', '2018-07-19', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('135', '1', '116.1.6.23', '', '新增', '任务列表', '8', '', 'TEST', '2018-07-19 10:57:36', '2018-07-19', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('134', '1', '116.1.6.23', '', '新增', '合同记录', '7', '客户1', 'TEST', '2018-07-19 10:49:17', '2018-07-19', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('135', '1', '116.1.6.23', '', '新增', '客户列表', '8', '', 'TEST', '2018-07-19 10:57:36', '2018-07-19', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('136', '1', '116.1.6.23', '', '新增', '任务链接', '8', '桂电', 'TEST', '2018-07-19 10:59:18', '2018-07-19', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('137', '1', '116.1.6.23', '', '新增', '订单记录', '8', '桂电', 'TEST', '2018-07-19 10:59:31', '2018-07-19', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('138', '1', '116.1.6.23', '', '新增', '合同记录', '8', '桂电', 'TEST', '2018-07-19 11:00:24', '2018-07-19', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('139', '1', '114.239.127.95', '', '修改', '跟单记录', '0', '', 'TEST', '2018-07-19 11:06:20', '2018-07-19', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('140', '1', '114.239.127.95', '', '新增', '合同记录', '8', '桂电', 'TEST', '2018-07-19 11:07:21', '2018-07-19', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('141', '1', '58.57.5.26', '', '新增', '任务列表', '9', '', 'TEST', '2018-07-31 11:24:23', '2018-07-31', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('141', '1', '58.57.5.26', '', '新增', '客户列表', '9', '', 'TEST', '2018-07-31 11:24:23', '2018-07-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('142', '1', '58.57.5.26', '', '新增', '任务链接', '9', '小堂', 'TEST', '2018-07-31 11:29:00', '2018-07-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('143', '1', '58.57.5.26', '', '新增', '订单记录', '9', '小堂', 'TEST', '2018-07-31 11:29:13', '2018-07-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('144', '1', '58.57.5.26', '', '新增', '合同记录', '9', '小堂', 'TEST', '2018-07-31 11:34:10', '2018-07-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('145', '1', '58.57.5.26', '', '新增', '收支记录', '0', '', 'TEST', '2018-07-31 11:35:11', '2018-07-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('146', '1', '58.57.5.26', '', '删除', '合同记录', '9', '小堂', 'TEST', '2018-07-31 11:39:22', '2018-07-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('147', '1', '58.57.5.26', '', '新增', '合同记录', '9', '小堂', 'TEST', '2018-07-31 11:39:55', '2018-07-31', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('148', '1', '221.234.182.206', '', '新增', '任务列表', '10', '', 'TEST', '2018-08-01 12:24:15', '2018-08-01', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('148', '1', '221.234.182.206', '', '新增', '客户列表', '10', '', 'TEST', '2018-08-01 12:24:15', '2018-08-01', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('149', '1', '223.74.123.188', '', '删除', '合同记录', '9', '小堂', 'TEST', '2018-08-06 18:49:49', '2018-08-06', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('150', '1', '116.8.33.155', '', '新增', '任务列表', '11', '', 'TEST', '2018-08-07 16:37:37', '2018-08-07', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('151', '1', '116.8.33.155', '', '新增', '任务列表', '12', '', 'TEST', '2018-08-07 16:38:32', '2018-08-07', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('150', '1', '116.8.33.155', '', '新增', '客户列表', '11', '', 'TEST', '2018-08-07 16:37:37', '2018-08-07', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('151', '1', '116.8.33.155', '', '新增', '客户列表', '12', '', 'TEST', '2018-08-07 16:38:32', '2018-08-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('152', '1', '116.8.33.155', '', '新增', '任务链接', '12', '尔尔幼儿园', 'TEST', '2018-08-07 16:40:15', '2018-08-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('153', '1', '116.8.33.155', '', '新增', '跟单记录', '12', '尔尔幼儿园', 'TEST', '2018-08-07 16:41:37', '2018-08-07', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('154', '1', '112.224.74.145', '', '新增', '订单记录', '7', '任务1', 'TEST', '2018-08-08 13:17:53', '2018-08-08', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('155', '1', '112.224.74.145', '', '新增', '任务列表', '13', '', 'TEST', '2018-08-08 13:25:10', '2018-08-08', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('156', '1', '116.8.33.155', '', '新增', '任务列表', '14', '', 'TEST', '2018-08-09 17:30:19', '2018-08-09', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('154', '1', '112.224.74.145', '', '新增', '订单记录', '7', '客户1', 'TEST', '2018-08-08 13:17:53', '2018-08-08', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('155', '1', '112.224.74.145', '', '新增', '客户列表', '13', '', 'TEST', '2018-08-08 13:25:10', '2018-08-08', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('156', '1', '116.8.33.155', '', '新增', '客户列表', '14', '', 'TEST', '2018-08-09 17:30:19', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('157', '1', '116.8.33.155', '', '新增', '任务链接', '14', '123幼儿园吗', 'TEST', '2018-08-09 17:32:26', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('158', '1', '116.8.33.155', '', '新增', '订单记录', '14', '123幼儿园吗', 'TEST', '2018-08-09 17:33:10', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('159', '1', '116.8.33.155', '', '新增', '合同记录', '14', '123幼儿园吗', 'TEST', '2018-08-09 17:36:11', '2018-08-09', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('160', '1', '219.151.231.163', '', '新增', '任务列表', '15', '', 'TEST', '2018-08-09 17:52:34', '2018-08-09', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('160', '1', '219.151.231.163', '', '新增', '客户列表', '15', '', 'TEST', '2018-08-09 17:52:34', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('161', '1', '219.151.231.163', '', '新增', '任务链接', '15', '张三', 'TEST', '2018-08-09 17:53:16', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('162', '1', '219.151.231.163', '', '新增', '任务链接', '15', '张三', 'TEST', '2018-08-09 17:53:34', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('163', '1', '219.151.231.163', '', '新增', '任务链接', '15', '张三', 'TEST', '2018-08-09 17:54:05', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('164', '1', '219.151.231.163', '', '新增', '任务链接', '15', '张三', 'TEST', '2018-08-09 17:54:19', '2018-08-09', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('165', '1', '119.123.3.50', '', '新增', '订单记录', '15', '张三', 'TEST', '2018-08-10 10:01:49', '2018-08-10', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('166', '1', '219.151.231.163', '', '新增', '任务列表', '16', '', 'TEST', '2018-08-10 10:30:57', '2018-08-10', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('167', '1', '219.151.231.163', '', '删除', '任务列表', '15', '', 'TEST', '2018-08-10 10:31:41', '2018-08-10', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('168', '5', '219.151.231.163', '', '新增', '任务列表', '17', '', 'test', '2018-08-10 10:34:24', '2018-08-10', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('166', '1', '219.151.231.163', '', '新增', '客户列表', '16', '', 'TEST', '2018-08-10 10:30:57', '2018-08-10', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('167', '1', '219.151.231.163', '', '删除', '客户列表', '15', '', 'TEST', '2018-08-10 10:31:41', '2018-08-10', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('168', '5', '219.151.231.163', '', '新增', '客户列表', '17', '', 'test', '2018-08-10 10:34:24', '2018-08-10', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('169', '5', '219.151.231.163', '', '新增', '任务链接', '16', '附一', 'test', '2018-08-10 10:39:52', '2018-08-10', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('170', '5', '219.151.231.163', '', '修改', '跟单记录', '0', '', 'test', '2018-08-10 10:40:54', '2018-08-10', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('171', '5', '219.151.231.163', '', '修改', '跟单记录', '0', '', 'test', '2018-08-10 10:41:03', '2018-08-10', '0', '0');
@@ -1168,18 +1168,18 @@ INSERT INTO `ci_userlog` VALUES ('176', '5', '219.151.231.163', '', '新增', '�
 INSERT INTO `ci_userlog` VALUES ('177', '5', '219.151.231.163', '', '新增', '任务链接', '17', '吴五', 'test', '2018-08-10 10:53:20', '2018-08-10', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('178', '5', '219.151.231.163', '', '新增', '订单记录', '16', '附一', 'test', '2018-08-10 11:05:52', '2018-08-10', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('179', '5', '219.151.231.163', '', '删除', '任务链接', '16', '附一', 'test', '2018-08-10 14:50:50', '2018-08-10', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('180', '7', '39.80.65.149', '', '新增', '任务列表', '18', '', '张英', '2018-08-11 12:26:16', '2018-08-11', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('180', '7', '39.80.65.149', '', '新增', '客户列表', '18', '', '张英', '2018-08-11 12:26:16', '2018-08-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('181', '1', '183.160.44.204', '', '修改', '跟单记录', '0', '', 'TEST', '2018-08-11 14:51:30', '2018-08-11', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('182', '1', '113.65.211.173', '', '删除', '任务列表', '18', '', 'TEST', '2018-08-11 15:54:02', '2018-08-11', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('182', '1', '113.65.211.173', '', '删除', '客户列表', '18', '', 'TEST', '2018-08-11 15:54:02', '2018-08-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('183', '1', '183.160.44.204', '', '新增', '合同记录', '14', '123幼儿园吗', 'TEST', '2018-08-11 16:06:08', '2018-08-11', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('184', '7', '113.65.211.173', '', '新增', '任务列表', '19', '', '张英', '2018-08-11 16:06:23', '2018-08-11', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('184', '7', '113.65.211.173', '', '新增', '客户列表', '19', '', '张英', '2018-08-11 16:06:23', '2018-08-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('185', '1', '183.160.44.204', '', '修改', '跟单记录', '0', '', 'TEST', '2018-08-11 16:06:36', '2018-08-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('186', '1', '183.160.44.204', '', '删除', '合同记录', '14', '123幼儿园吗', 'TEST', '2018-08-11 16:06:44', '2018-08-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('187', '1', '183.160.44.204', '', '新增', '合同记录', '17', '吴五', 'TEST', '2018-08-11 16:08:37', '2018-08-11', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('188', '1', '116.8.39.94', '', '新增', '订单记录', '14', '123幼儿园吗', 'TEST', '2018-08-12 14:46:14', '2018-08-12', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('189', '1', '116.8.39.94', '', '新增', '跟单记录', '14', '123幼儿园吗', 'TEST', '2018-08-12 15:12:26', '2018-08-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('190', '1', '116.8.39.94', '', '新增', '任务列表', '20', '', 'TEST', '2018-08-13 09:31:20', '2018-08-13', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('191', '1', '114.240.224.193', '', '修改', '任务列表', '20', '幼儿园', 'TEST', '2018-08-18 10:38:08', '2018-08-18', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('190', '1', '116.8.39.94', '', '新增', '客户列表', '20', '', 'TEST', '2018-08-13 09:31:20', '2018-08-13', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('191', '1', '114.240.224.193', '', '修改', '客户列表', '20', '幼儿园', 'TEST', '2018-08-18 10:38:08', '2018-08-18', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('192', '1', '175.0.225.58', '', '新增', '任务链接', '20', '幼儿园', 'TEST', '2018-08-21 11:45:54', '2018-08-21', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('193', '1', '175.0.225.58', '', '新增', '跟单记录', '20', '幼儿园', 'TEST', '2018-08-21 11:46:00', '2018-08-21', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('194', '1', '123.128.205.237', '', '新增', '任务链接', '19', '深圳市家鸿口腔医疗股份有限公司', 'TEST', '2018-08-23 18:00:07', '2018-08-23', '0', '0');
@@ -1193,61 +1193,61 @@ INSERT INTO `ci_userlog` VALUES ('201', '1', '49.70.122.128', '', '删除', '跟
 INSERT INTO `ci_userlog` VALUES ('202', '1', '123.128.205.237', null, '删除', '收支记录', '0', '', 'TEST', '2018-08-23 19:36:05', '2018-08-23', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('203', '1', '122.238.71.175', '', '新增', '合同记录', '20', '幼儿园', 'TEST', '2018-08-24 15:05:45', '2018-08-24', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('204', '1', '61.140.86.170', '', '删除', '跟单记录', '0', '', 'TEST', '2018-08-29 09:21:39', '2018-08-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('205', '1', '61.140.86.170', '', '修改', '任务列表', '15', '张三', 'TEST', '2018-08-29 09:24:27', '2018-08-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('205', '1', '61.140.86.170', '', '修改', '客户列表', '15', '张三', 'TEST', '2018-08-29 09:24:27', '2018-08-29', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('206', '1', '61.140.86.170', '', '新增', '跟单记录', '15', '张三', 'TEST', '2018-08-29 09:24:57', '2018-08-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('207', '1', '61.140.86.170', '', '修改', '任务列表', '15', '张三', 'TEST', '2018-08-29 09:29:12', '2018-08-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('208', '1', '61.140.86.170', '', '新增', '任务列表', '21', '', 'TEST', '2018-08-29 09:32:10', '2018-08-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('209', '1', '61.140.86.170', '', '修改', '任务列表', '21', '测试', 'TEST', '2018-08-29 09:32:41', '2018-08-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('210', '1', '61.140.86.170', '', '修改', '任务列表', '21', '测试', 'TEST', '2018-08-29 09:33:28', '2018-08-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('211', '1', '183.135.227.58', '', '新增', '任务列表', '22', '', 'TEST', '2018-08-30 16:17:01', '2018-08-30', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('207', '1', '61.140.86.170', '', '修改', '客户列表', '15', '张三', 'TEST', '2018-08-29 09:29:12', '2018-08-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('208', '1', '61.140.86.170', '', '新增', '客户列表', '21', '', 'TEST', '2018-08-29 09:32:10', '2018-08-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('209', '1', '61.140.86.170', '', '修改', '客户列表', '21', '测试', 'TEST', '2018-08-29 09:32:41', '2018-08-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('210', '1', '61.140.86.170', '', '修改', '客户列表', '21', '测试', 'TEST', '2018-08-29 09:33:28', '2018-08-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('211', '1', '183.135.227.58', '', '新增', '客户列表', '22', '', 'TEST', '2018-08-30 16:17:01', '2018-08-30', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('212', '1', '183.135.227.58', '', '新增', '任务链接', '22', '深圳事情奢望有限公司呢', 'TEST', '2018-08-30 16:18:08', '2018-08-30', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('213', '1', '183.135.227.58', '', '新增', '跟单记录', '22', '深圳事情奢望有限公司呢', 'TEST', '2018-08-30 16:18:28', '2018-08-30', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('214', '1', '183.135.227.58', '', '新增', '订单记录', '22', '深圳事情奢望有限公司呢', 'TEST', '2018-08-30 16:20:14', '2018-08-30', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('215', '8', '180.104.28.120', '', '新增', '任务列表', '23', '', '威子', '2018-09-02 10:57:59', '2018-09-02', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('215', '8', '180.104.28.120', '', '新增', '客户列表', '23', '', '威子', '2018-09-02 10:57:59', '2018-09-02', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('216', '8', '180.104.28.120', '', '修改', '跟单记录', '0', '', '威子', '2018-09-02 10:58:47', '2018-09-02', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('217', '8', '180.104.28.120', '', '删除', '订单记录', '14', '123幼儿园吗', '威子', '2018-09-02 10:59:37', '2018-09-02', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('218', '1', '117.136.52.201', '', '删除', '任务列表', '23', '', 'TEST', '2018-09-04 13:45:58', '2018-09-04', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('219', '1', '111.37.251.215', '', '修改', '任务列表', '18', '烟台刘先生', 'TEST', '2018-09-06 23:18:58', '2018-09-06', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('218', '1', '117.136.52.201', '', '删除', '客户列表', '23', '', 'TEST', '2018-09-04 13:45:58', '2018-09-04', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('219', '1', '111.37.251.215', '', '修改', '客户列表', '18', '烟台刘先生', 'TEST', '2018-09-06 23:18:58', '2018-09-06', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('220', '1', '116.54.27.146', '', '新增', '订单记录', '16', '附一', 'TEST', '2018-09-08 16:21:23', '2018-09-08', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('221', '1', '127.0.0.1', '', '新增', '任务列表', '24', '', 'TEST', '2018-09-12 17:00:49', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('222', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:29:17', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('223', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:29:32', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('224', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:30:07', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('225', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:38:08', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('226', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:39:49', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('227', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:42:23', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('228', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:42:42', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('229', '1', '127.0.0.1', '', '修改', '任务列表', '24', 'liandong', 'TEST', '2018-09-12 17:46:38', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('230', '1', '127.0.0.1', '', '删除', '任务列表', '24', '', 'TEST', '2018-09-12 17:51:51', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('231', '1', '127.0.0.1', '', '新增', '任务列表', '25', '', 'TEST', '2018-09-12 17:52:36', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('232', '1', '127.0.0.1', '', '修改', '任务列表', '25', 'zhangsan', 'TEST', '2018-09-12 17:53:31', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('233', '1', '127.0.0.1', '', '修改', '任务列表', '25', 'zhangsan', 'TEST', '2018-09-12 18:10:27', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('234', '1', '127.0.0.1', '', '新增', '任务列表', '26', '', 'TEST', '2018-09-12 18:12:35', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('235', '1', '127.0.0.1', '', '修改', '任务列表', '26', '王五', 'TEST', '2018-09-12 18:13:22', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('236', '1', '127.0.0.1', '', '修改', '任务列表', '26', '王五', 'TEST', '2018-09-12 18:13:40', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('237', '1', '127.0.0.1', '', '修改', '任务列表', '25', 'zhangsan', 'TEST', '2018-09-12 18:15:41', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('238', '1', '127.0.0.1', '', '删除', '任务列表', '26', '', 'TEST', '2018-09-12 18:16:04', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('239', '1', '127.0.0.1', '', '删除', '任务列表', '25', '', 'TEST', '2018-09-12 18:16:07', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('221', '1', '127.0.0.1', '', '新增', '客户列表', '24', '', 'TEST', '2018-09-12 17:00:49', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('222', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:29:17', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('223', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:29:32', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('224', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:30:07', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('225', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:38:08', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('226', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:39:49', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('227', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:42:23', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('228', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:42:42', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('229', '1', '127.0.0.1', '', '修改', '客户列表', '24', 'liandong', 'TEST', '2018-09-12 17:46:38', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('230', '1', '127.0.0.1', '', '删除', '客户列表', '24', '', 'TEST', '2018-09-12 17:51:51', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('231', '1', '127.0.0.1', '', '新增', '客户列表', '25', '', 'TEST', '2018-09-12 17:52:36', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('232', '1', '127.0.0.1', '', '修改', '客户列表', '25', 'zhangsan', 'TEST', '2018-09-12 17:53:31', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('233', '1', '127.0.0.1', '', '修改', '客户列表', '25', 'zhangsan', 'TEST', '2018-09-12 18:10:27', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('234', '1', '127.0.0.1', '', '新增', '客户列表', '26', '', 'TEST', '2018-09-12 18:12:35', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('235', '1', '127.0.0.1', '', '修改', '客户列表', '26', '王五', 'TEST', '2018-09-12 18:13:22', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('236', '1', '127.0.0.1', '', '修改', '客户列表', '26', '王五', 'TEST', '2018-09-12 18:13:40', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('237', '1', '127.0.0.1', '', '修改', '客户列表', '25', 'zhangsan', 'TEST', '2018-09-12 18:15:41', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('238', '1', '127.0.0.1', '', '删除', '客户列表', '26', '', 'TEST', '2018-09-12 18:16:04', '2018-09-12', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('239', '1', '127.0.0.1', '', '删除', '客户列表', '25', '', 'TEST', '2018-09-12 18:16:07', '2018-09-12', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('240', '1', '127.0.0.1', '', '修改', '任务链接', '22', '深圳事情奢望有限公司呢', 'TEST', '2018-09-12 18:52:50', '2018-09-12', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('241', '1', '127.0.0.1', '', '新增', '任务列表', '23', '', 'TEST', '2018-09-14 11:51:22', '2018-09-14', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('242', '1', '127.0.0.1', '', '新增', '任务列表', '24', '', 'TEST', '2018-09-14 11:55:42', '2018-09-14', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('243', '1', '127.0.0.1', '', '修改', '任务列表', '24', '小王', 'TEST', '2018-09-14 11:56:17', '2018-09-14', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('241', '1', '127.0.0.1', '', '新增', '客户列表', '23', '', 'TEST', '2018-09-14 11:51:22', '2018-09-14', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('242', '1', '127.0.0.1', '', '新增', '客户列表', '24', '', 'TEST', '2018-09-14 11:55:42', '2018-09-14', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('243', '1', '127.0.0.1', '', '修改', '客户列表', '24', '小王', 'TEST', '2018-09-14 11:56:17', '2018-09-14', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('244', '1', '127.0.0.1', '', '新增', '任务链接', '24', '小王', 'TEST', '2018-09-14 11:57:11', '2018-09-14', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('245', '1', '127.0.0.1', '', '修改', '任务列表', '24', '小王', 'TEST', '2018-09-14 11:57:34', '2018-09-14', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('246', '1', '127.0.0.1', '', '修改', '任务列表', '22', '深圳事情奢望有限公司呢', 'TEST', '2018-09-14 12:17:29', '2018-09-14', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('247', '10', '127.0.0.1', '', '新增', '任务列表', '25', '', 'ceshi2', '2018-09-26 19:56:41', '2018-09-26', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('245', '1', '127.0.0.1', '', '修改', '客户列表', '24', '小王', 'TEST', '2018-09-14 11:57:34', '2018-09-14', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('246', '1', '127.0.0.1', '', '修改', '客户列表', '22', '深圳事情奢望有限公司呢', 'TEST', '2018-09-14 12:17:29', '2018-09-14', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('247', '10', '127.0.0.1', '', '新增', '客户列表', '25', '', 'ceshi2', '2018-09-26 19:56:41', '2018-09-26', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('248', '10', '127.0.0.1', '', '新增', '跟单记录', '25', 'xiaozhang', 'ceshi2', '2018-09-26 19:57:20', '2018-09-26', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('249', '10', '127.0.0.1', '', '新增', '订单记录', '25', 'xiaozhang', 'ceshi2', '2018-09-26 20:03:48', '2018-09-26', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('250', '10', '127.0.0.1', '', '新增', '合同记录', '25', 'xiaozhang', 'ceshi2', '2018-09-26 20:05:59', '2018-09-26', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('251', '9', '127.0.0.1', '', '新增', '任务列表', '26', '', 'ceshi', '2018-09-26 20:21:42', '2018-09-26', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('251', '9', '127.0.0.1', '', '新增', '客户列表', '26', '', 'ceshi', '2018-09-26 20:21:42', '2018-09-26', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('252', '9', '127.0.0.1', '', '新增', '跟单记录', '26', 'xiaotian', 'ceshi', '2018-09-26 20:22:02', '2018-09-26', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('253', '9', '127.0.0.1', '', '修改', '任务列表', '25', 'xiaozhang', 'ceshi', '2018-09-26 21:08:43', '2018-09-26', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('253', '9', '127.0.0.1', '', '修改', '客户列表', '25', 'xiaozhang', 'ceshi', '2018-09-26 21:08:43', '2018-09-26', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('254', '9', '127.0.0.1', '', '修改', '跟单记录', '0', '', 'ceshi', '2018-09-26 21:09:07', '2018-09-26', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('255', '1', '127.0.0.1', '', '删除', '任务列表', '55', '', 'TEST', '2018-09-29 20:30:09', '2018-09-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('256', '1', '127.0.0.1', '', '删除', '任务列表', '56', '', 'TEST', '2018-09-29 20:30:12', '2018-09-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('257', '1', '127.0.0.1', '', '删除', '任务列表', '57', '', 'TEST', '2018-09-29 20:30:15', '2018-09-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('258', '1', '127.0.0.1', '', '修改', '任务列表', '120', '342', 'TEST', '2018-09-29 20:42:31', '2018-09-29', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('259', '1', '127.0.0.1', '', '修改', '任务列表', '377', '342', 'TEST', '2018-10-05 17:25:39', '2018-10-05', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('255', '1', '127.0.0.1', '', '删除', '客户列表', '55', '', 'TEST', '2018-09-29 20:30:09', '2018-09-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('256', '1', '127.0.0.1', '', '删除', '客户列表', '56', '', 'TEST', '2018-09-29 20:30:12', '2018-09-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('257', '1', '127.0.0.1', '', '删除', '客户列表', '57', '', 'TEST', '2018-09-29 20:30:15', '2018-09-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('258', '1', '127.0.0.1', '', '修改', '客户列表', '120', '342', 'TEST', '2018-09-29 20:42:31', '2018-09-29', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('259', '1', '127.0.0.1', '', '修改', '客户列表', '377', '342', 'TEST', '2018-10-05 17:25:39', '2018-10-05', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('260', '1', '127.0.0.1', '', '新增', '收支记录', '0', '', 'TEST', '2018-10-07 13:37:36', '2018-10-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('261', '1', '127.0.0.1', '', '新增', '收支记录', '26', 'xiaotian', 'TEST', '2018-10-07 13:38:09', '2018-10-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('262', '1', '127.0.0.1', '', '新增', '收支记录', '26', 'xiaotian', 'TEST', '2018-10-07 13:38:18', '2018-10-07', '0', '0');
@@ -1260,7 +1260,7 @@ INSERT INTO `ci_userlog` VALUES ('268', '1', '127.0.0.1', '', '新增', '合同�
 INSERT INTO `ci_userlog` VALUES ('269', '1', '127.0.0.1', '', '新增', '合同到款', '17', '吴五', 'TEST', '2018-12-04 20:40:35', '2018-12-04', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('270', '1', '127.0.0.1', '', '新增', '合同到款', '14', '123幼儿园吗', 'TEST', '2018-12-04 20:40:41', '2018-12-04', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('271', '1', '127.0.0.1', '', '新增', '合同到款', '17', '吴五', 'TEST', '2018-12-04 20:43:45', '2018-12-04', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('272', '1', '127.0.0.1', '', '修改', '任务列表', '26', 'xiaotian', 'TEST', '2019-03-31 19:05:13', '2019-03-31', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('272', '1', '127.0.0.1', '', '修改', '客户列表', '26', 'xiaotian', 'TEST', '2019-03-31 19:05:13', '2019-03-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('273', '1', '127.0.0.1', '', '新增', '订单记录', '26', 'xiaotian', 'TEST', '2019-03-31 19:25:24', '2019-03-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('274', '1', '127.0.0.1', '', '新增', '合同记录', '26', 'xiaotian', 'TEST', '2019-03-31 19:35:35', '2019-03-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('275', '1', '127.0.0.1', '', '新增', '合同到款', '26', 'xiaotian', 'TEST', '2019-03-31 19:35:51', '2019-03-31', '0', '0');
@@ -1335,8 +1335,8 @@ INSERT INTO `ci_userlog` VALUES ('343', '1', '127.0.0.1', '', '删除', '跟单�
 INSERT INTO `ci_userlog` VALUES ('344', '1', '127.0.0.1', '', '删除', '跟单记录', '0', '', 'TEST', '2019-03-31 21:25:34', '2019-03-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('345', '1', '127.0.0.1', '', '删除', '订单记录', '26', 'xiaotian', 'TEST', '2019-03-31 21:25:39', '2019-03-31', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('346', '1', '127.0.0.1', '', '删除', '合同记录', '26', 'xiaotian', 'TEST', '2019-03-31 21:25:44', '2019-03-31', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('347', '1', '121.234.245.173', '', '修改', '任务列表', '56', '342', 'TEST', '2019-04-01 10:59:40', '2019-04-01', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('348', '1', '49.89.108.13', '', '修改', '任务列表', '56', '342', 'TEST', '2019-04-01 11:52:39', '2019-04-01', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('347', '1', '121.234.245.173', '', '修改', '客户列表', '56', '342', 'TEST', '2019-04-01 10:59:40', '2019-04-01', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('348', '1', '49.89.108.13', '', '修改', '客户列表', '56', '342', 'TEST', '2019-04-01 11:52:39', '2019-04-01', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('349', '1', '49.89.108.13', '', '新增', '任务链接', '56', '342', 'TEST', '2019-04-01 13:00:57', '2019-04-01', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('350', '1', '49.89.108.13', '', '新增', '跟单记录', '56', '342', 'TEST', '2019-04-01 13:01:31', '2019-04-01', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('351', '1', '49.89.108.13', null, '删除', '收支记录', '0', '', 'TEST', '2019-04-01 14:37:31', '2019-04-01', '0', '0');
@@ -1347,10 +1347,10 @@ INSERT INTO `ci_userlog` VALUES ('355', '1', '118.252.99.179', '', '新增', '�
 INSERT INTO `ci_userlog` VALUES ('356', '1', '118.252.99.179', '', '新增', '合同记录', '65', '薛十一', 'TEST', '2019-05-05 17:14:34', '2019-05-05', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('357', '1', '118.252.99.179', '', '新增', '任务链接', '65', '薛十一', 'TEST', '2019-05-05 17:16:16', '2019-05-05', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('358', '1', '118.252.99.179', '', '新增', '跟单记录', '65', '薛十一', 'TEST', '2019-05-05 17:16:30', '2019-05-05', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('359', '1', '112.9.221.146', '', '新增', '任务列表', '66', '', 'TEST', '2019-05-07 08:49:46', '2019-05-07', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('359', '1', '112.9.221.146', '', '新增', '客户列表', '66', '', 'TEST', '2019-05-07 08:49:46', '2019-05-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('360', '1', '112.9.221.146', '', '删除', '跟单记录', '0', '', 'TEST', '2019-05-07 08:50:25', '2019-05-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('361', '1', '112.9.221.146', '', '删除', '跟单记录', '0', '', 'TEST', '2019-05-07 08:50:27', '2019-05-07', '0', '0');
-INSERT INTO `ci_userlog` VALUES ('362', '1', '112.9.221.146', '', '修改', '任务列表', '66', '123', 'TEST', '2019-05-07 08:51:14', '2019-05-07', '0', '0');
+INSERT INTO `ci_userlog` VALUES ('362', '1', '112.9.221.146', '', '修改', '客户列表', '66', '123', 'TEST', '2019-05-07 08:51:14', '2019-05-07', '0', '0');
 INSERT INTO `ci_userlog` VALUES ('363', '1', '112.9.221.146', '', '删除', '合同记录', '65', '薛十一', 'TEST', '2019-05-07 08:51:40', '2019-05-07', '0', '0');
 
 -- ----------------------------

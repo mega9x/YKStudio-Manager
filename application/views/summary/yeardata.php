@@ -18,7 +18,7 @@
 
 <span class="MenuboxS">
  <ul>
- <li ><span><a href="<?php echo site_url('summary/index')?>?action=Main&otype=Main">任务概况</a></span></li>
+ <li ><span><a href="<?php echo site_url('summary/index')?>?action=Main&otype=Main">客户概况</a></span></li>
  <li ><span><a href="<?php echo site_url('summary/gendan')?>?action=Gendan&otype=Gendan">跟单统计</a></span></li>
  <li ><span><a href="<?php echo site_url('summary/order')?>?action=Order&otype=Order">订单统计</a></span></li>
  <li ><span><a href="<?php echo site_url('summary/hetong')?>?action=Hetong&otype=Hetong">合同统计</a></span></li>
@@ -33,7 +33,7 @@
 <script type="text/javascript">
 theme = 'grid';
 var chart;$(document).ready(function(){chart=new Highcharts.Chart({chart:{renderTo:'container',defaultSeriesType:'line'},title: {text:''},xAxis:{categories:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']},yAxis:{title:{text:''}},tooltip:{enabled:false,formatter:function(){return'<b>'+this.series.name+'</b><br/>'+this.x+': '+this.y+'°C'}},plotOptions:{line:{dataLabels:{enabled:true},enableMouseTracking:false}},series:[
-{name:'新增任务',data:[<?php echo join(',',$customer)?>]},
+{name:'新增客户',data:[<?php echo join(',',$customer)?>]},
 {name:'跟单次数',data:[<?php echo join(',',$single)?>]},
 {name:'订单数量',data:[<?php echo join(',',$order)?>]},
 {name:'合同数量',data:[<?php echo join(',',$hetong)?>]},
@@ -44,7 +44,7 @@ var chart;$(document).ready(function(){chart=new Highcharts.Chart({chart:{render
  <tr>
  <td valign="top" class="td_n pd10"><table width="100%" border="0" cellspacing="0" cellpadding="0" CLASS="table_1">
  <tr class="tr_t">
- <td class="td_l_l"><B><?php echo date('Y')?> 年度任务统计报表</B></td>
+ <td class="td_l_l"><B><?php echo date('Y')?> 年度客户统计报表</B></td>
  </tr>
  <tr >
  <td class="td_l_tj"><div id="container" style="width: 100%; height: 400px;"></div></td>

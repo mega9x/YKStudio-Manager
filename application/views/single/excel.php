@@ -1,56 +1,57 @@
-<?php if(!defined('BASEPATH')) exit('No direct script access allowed');?>
- <table width="100%" border="1" cellpadding="0" cellspacing="0">
- <td class="td_l_c">±àºÅ</td>
- <td class="td_l_l">¿Í»§Ãû³Æ</td>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+    <td class="td_l_c">ï¿½ï¿½ï¿½</td>
+    <td class="td_l_l">ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
- <td class="td_l_c">¸úµ¥ÀàÐÍ</td>
-
-
- <td class="td_l_c">¸úµ¥½ø¶È</td>
+    <td class="td_l_c">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
 
- <td class="td_l_c">¸úµ¥¶ÔÏó</td>
-
- <td class="td_l_c">ÏÂ´ÎÁªÏµ</td>
-
- <td class="td_l_l">ÏêÏ¸ÄÚÈÝ</td>
+    <td class="td_l_c">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 
 
- <td class="td_l_c">ÒµÎñÔ±</td>
+    <td class="td_l_c">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+
+    <td class="td_l_c">ï¿½Â´ï¿½ï¿½ï¿½Ïµ</td>
+
+    <td class="td_l_l">ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½</td>
 
 
- <td class="td_l_c">Â¼ÈëÊ±¼ä</td>
-
- 
- </tr>
- 
- <?php foreach($list as $arr=>$row) {?>
- <tr class="tr">
- <td class="td_l_c"><?php echo $row['id']?></td>
- <td class="td_l_l"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['customername']);?></td>
-
- <td class="td_l_c"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['type']);?></td>
+    <td class="td_l_c">Òµï¿½ï¿½Ô±</td>
 
 
- <td class="td_l_c"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['state']);?></td>
+    <td class="td_l_c">Â¼ï¿½ï¿½Ê±ï¿½ï¿½</td>
 
 
- <td class="td_l_c"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['linkman']);?></td>
+    </tr>
+
+    <?php foreach ($list as $arr => $row) { ?>
+        <tr class="tr">
+            <td class="td_l_c"><?php echo $row['id'] ?></td>
+            <td class="td_l_l"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['customername']); ?></td>
+
+            <td class="td_l_c"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['type']); ?></td>
 
 
- <td class="td_l_c"><?php echo $row['nexttime']?></td>
+            <td class="td_l_c"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['state']); ?></td>
 
 
- <td class="td_l_l" style="line-height:25px;"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['content']);?></td>
+            <td class="td_l_c"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['linkman']); ?></td>
 
 
- <td class="td_l_c"><?php echo iconv("UTF-8","gbk//TRANSLIT",$row['adduser']);?></td>
+            <td class="td_l_c"><?php echo $row['nexttime'] ?></td>
 
- <td class="td_l_c"><?php echo $row['adddate']?></td>
 
- </tr>
- 
- <?php }?> 
- </table>
+            <td class="td_l_l"
+                style="line-height:25px;"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['content']); ?></td>
+
+
+            <td class="td_l_c"><?php echo iconv("UTF-8", "gbk//TRANSLIT", $row['adduser']); ?></td>
+
+            <td class="td_l_c"><?php echo $row['adddate'] ?></td>
+
+        </tr>
+
+    <?php } ?>
+</table>
  
   

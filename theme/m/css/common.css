@@ -243,14 +243,14 @@ span.right { float: right; padding-right: 10px; }
 .td1 { float: left; border-bottom: 1px solid #E1E2E4; line-height: 30px; width: 50%; }
 .td2 { float: right; border-bottom: 1px solid #E1E2E4; line-height: 30px; width: 49%; }
 .tr { background: #FFFFFF; }
-.tr:hover { background: #F5F5F5; }
+.tr:hover { background: #92dda2; }
 .table_1 { border-left: 1px solid #E1E2E4; border-bottom: 1px solid #E1E2E4; }
 .tr_t { background-color: #EFF0EF; border-bottom: 1px solid #afc0c9; height:35px; padding-top: 0px; padding-bottom: 0px;text-align: center; font-size: 14px; font-weight: bold; color: #000; }
 .tr_f { background-color: #EFF0EF; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; height:35px; padding-top: 0px; padding-bottom: 0px;text-align: left; padding-left: 10px; font-size: 14px; font-weight: bold; color: #333; }
 .tr_b { background-color: #EFF0EF; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; height:35px; padding-top: 0px; padding-bottom: 0px;text-align: left; padding-left: 10px; font-size: 14px; font-weight: bold; color: #333; }
 .td_l_l { text-align: left; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; padding-left: 10px; height:35px; padding-top: 0px; padding-bottom: 0px;}
 .td_l_c { text-align: center; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; height:35px; padding-top: 0px; padding-bottom: 0px;}
-.td_l_r { text-align: right; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; height:35px; padding-top: 0px; padding-bottom: 0px;padding-right: 10px; }
+.td_l_r { text-align: right; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; height:35px; padding-top: 0px; padding-bottom: 0px;padding-right: 5px; max-width: 50px;}
 .td_l_tj { text-align: center; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; }
 .td_r_l { text-align: left; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; padding-left: 10px; height:35px; padding-top: 0px; padding-bottom: 0px;}
 .td_r_c { text-align: center; border-right: 1px solid #E1E2E4; border-top: 1px solid #E1E2E4; height:35px; padding-top: 0px; padding-bottom: 0px;}

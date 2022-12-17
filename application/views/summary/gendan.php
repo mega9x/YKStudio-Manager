@@ -18,7 +18,7 @@
 
 <span class="MenuboxS">
  <ul>
- <li ><span><a href="<?php echo site_url('summary/index')?>?action=Main&otype=Main">任务概况</a></span></li>
+ <li ><span><a href="<?php echo site_url('summary/index')?>?action=Main&otype=Main">客户概况</a></span></li>
  <li class="hover"><span><a href="<?php echo site_url('summary/gendan')?>?action=Gendan&otype=Gendan">跟单统计</a></span></li>
  <li ><span><a href="<?php echo site_url('summary/order')?>?action=Order&otype=Order">订单统计</a></span></li>
  <li ><span><a href="<?php echo site_url('summary/hetong')?>?action=Hetong&otype=Hetong">合同统计</a></span></li>

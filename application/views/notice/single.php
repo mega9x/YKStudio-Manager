@@ -1,40 +1,58 @@
-<?php if(!defined('BASEPATH')) exit('No direct script access allowed');?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="<?php echo base_url()?>theme/default/css/common.css" rel="stylesheet" type="text/css">
-<script language="javascript" src="<?php echo base_url()?>theme/default/js/Common.js"></script>
-<link href="<?php echo base_url()?>theme/default/css/inettuts.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="<?php echo base_url()?>theme/default/js/jquery.min.js"></script>
-<script language="javascript" src="<?php echo base_url()?>theme/default/js/tips.js"></script>
-<script src="<?php echo base_url()?>theme/default/js/jquery.artDialog.js?skin=default"></script>
-<script src="<?php echo base_url()?>theme/default/js/iframeTools.js"></script>
-<script language="JavaScript">
-<!--
-function killerrors() { return true; } 
-window.onerror = killerrors;
--->
-</script>
-<style>
-html{ background:none;}
-body{ background-color:transparent;}
-</style>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="<?php echo base_url() ?>theme/default/css/common.css" rel="stylesheet" type="text/css">
+    <script language="javascript" src="<?php echo base_url() ?>theme/default/js/Common.js"></script>
+    <link href="<?php echo base_url() ?>theme/default/css/inettuts.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" src="<?php echo base_url() ?>theme/default/js/jquery.min.js"></script>
+    <script language="javascript" src="<?php echo base_url() ?>theme/default/js/tips.js"></script>
+    <script src="<?php echo base_url() ?>theme/default/js/jquery.artDialog.js?skin=default"></script>
+    <script src="<?php echo base_url() ?>theme/default/js/iframeTools.js"></script>
+    <script language="JavaScript">
+        <!--
+        function killerrors() {
+            return true;
+        }
+
+        window.onerror = killerrors;
+        -->
+    </script>
+    <style>
+        html {
+            background: none;
+        }
+
+        body {
+            background-color: transparent;
+        }
+    </style>
 </head>
 <body>
 <div class="notice-content">
- <ul>
- <?php 
- if (count($list)>0) {
- foreach($list as $arr=>$row){?>
- <li ><a onclick='gendan_InfoView<?php echo $row['id']?>()' style="cursor:pointer;" ><span class="r" style=""><?php echo substr($row['adddate'],-5)?></span>[<?php echo $row['type']?>] <?php echo $row['customername']?></a></li>
- <script>function gendan_InfoView<?php echo $row['id']?>() {$.dialog.open('<?php echo site_url('customer/records')?>?id=<?php echo $row['customerid']?>', {title: '查看', width: 1220,height: 520, fixed: true}); };</script>
- <?php }?>
- <?php } else {?>
- <li class='none'>抱歉，暂无相关记录！</li>
- <?php }?>
- </ul>
+    <ul>
+        <?php
+        if (count($list) > 0) {
+        foreach ($list as $arr => $row) {
+            ?>
+            <li><a onclick='gendan_InfoView<?php echo $row['id'] ?>()' style="cursor:pointer;"><span class="r"
+                                                                                                     style=""><?php echo substr($row['adddate'], -5) ?></span>[<?php echo $row['type'] ?>
+                    ] <?php echo $row['customername'] ?></a></li>
+            <script>function gendan_InfoView<?php echo $row['id']?>() {
+                    $.dialog.open('<?php echo site_url('customer/records')?>?id=<?php echo $row['customerid']?>', {
+                        title: '查看',
+                        width: 1220,
+                        height: 520,
+                        fixed: true
+                    });
+                };</script>
+        <?php } ?>
+        <?php } else { ?>
+            <li class='none'>抱歉，暂无相关记录！</li>
+        <?php } ?>
+    </ul>
 </div>
 </body>
 </html>

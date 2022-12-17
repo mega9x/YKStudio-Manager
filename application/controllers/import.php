@@ -25,6 +25,7 @@ class Import extends CI_Controller
         $this->load->view('import/index', $data);
         //var_dump($data);
     }
+
     function daoru()
     {
         $jieshou = str_htmlencode($this->input->post(NULL, TRUE));
@@ -49,12 +50,12 @@ class Import extends CI_Controller
                 $missionCode = $worksheet->getCellByColumnAndRow(5, $row)->getValue();
                 $missionLink = $worksheet->getCellByColumnAndRow(6, $row)->getValue();
                 $src = $worksheet->getCellByColumnAndRow(8, $row)->getValue();
-                if( strlen($accountName) <= 0 ||
+                if (strlen($accountName) <= 0 ||
                     strlen($accountPassword) <= 0 ||
                     strlen($site) <= 0 ||
                     strlen($area) <= 0 ||
                     strlen($missionTitle) <= 0 ||
-                    (strlen($missionCode) <= 0 && strlen($missionLink) <=0) ||
+                    (strlen($missionCode) <= 0 && strlen($missionLink) <= 0) ||
                     strlen($src) <= 0
                 ) {
                     continue;
@@ -65,7 +66,7 @@ class Import extends CI_Controller
                     'name' => $missionTitle,
                     'area1' => $area,
                     'area2' => "",
-                    'address' => "账户: " .$accountName. "\n密码: " .$accountPassword,
+                    'address' => "账户: " . $accountName . "\n密码: " . $accountPassword,
                     'source' => $src,
                     'trade' => "CPA",
                     'email' => "",
@@ -89,7 +90,7 @@ class Import extends CI_Controller
         }
         if (is_array($data) && count($data) > 0) {
             $this->excel_import_model->insert($data);
-            echo  PHP_EOL. '导入成功';
+            echo PHP_EOL . '导入成功';
         } else {
             str_alert('导入失败');
             //$this->load->view('Import/index');
